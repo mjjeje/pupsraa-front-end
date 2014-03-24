@@ -1,0 +1,158 @@
+/*----------------------------------------------------------------------------- 
+PUPSRAA Website Stylesheet
+-----------------------------------------------------------------------------*/
+ /* Basic Styles */
+
+img {width: 100%;}
+.clear {clear: both;}
+a:focus {outline: none !important;}
+
+/* Font Face*/
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/OpenSans-Regular-webfont.eot');
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+                        font-family: 'TrajanPro-Bold';
+                        src: url('fonts/trajanprobold.eot');
+                        src: url('fonts/trajanprobold.eot?#iefix') format('embedded-opentype'),
+                                 url('fonts/trajanprobold.woff') format('woff'),
+                                 url('fonts/trajanprobold.ttf') format('truetype'),
+                                 url('fonts/trajanprobold.svg#trajanprobold') format('svg');
+                        font-weight: normal;
+                        font-style: normal;
+                }
+@font-face {
+                        font-family: 'Gotham-Medium';
+                        src: url('fonts/gothammedium.eot');
+                        src: url('fonts/gothammedium.eot?#iefix') format('embedded-opentype'),
+                                 url('fonts/gothammedium.woff') format('woff'),
+                                 url('fonts/gothammedium.ttf') format('truetype'),
+                                 url('fonts/gothammedium.svg#gothammedium') format('svg');
+                        font-weight: normal;
+                        font-style: normal;
+                }
+@font-face {
+                        font-family: 'Gotham-Light';
+                        src: url('fonts/gothamlight.eot');
+                        src: url('fonts/gothamlight.eot?#iefix') format('embedded-opentype'),
+                                 url('fonts/gothamlight.woff') format('woff'),
+                                 url('fonts/gothamlight.ttf') format('truetype'),
+                                 url('fonts/gothamlight.svg#gothamlight') format('svg');
+                        font-weight: normal;
+                        font-style: normal;
+                }
+
+
+/* Header */
+#header-container {position: relative; min-height: 121px; border-bottom: 3px solid #800000; width: 100%;}
+.logo-container {padding: 15px 15px 0; left: 10%; width: 125px; position: relative; float: left;}
+.title {width: 360px; position: relative; left: 10%; margin: 26px 0 0; float: left;}
+.title span {display: block;}
+.pup-title {font-family: 'open_sansregular'; font-size: 10px; color: #646464; }
+.santarosa-title {font-size: 18px;}
+.alumni-title {font-family: 'TrajanPro-Bold'; font-size: 25px;}
+.menu-nav {color: #000; position: relative; font-family: 'Gotham-Light'; text-transform: uppercase; font-size: 12px; margin: 65px 10px 0 0; right: 5%; float: right;}
+.menu-nav ul {margin-bottom: 0px;}
+.menu-nav li {display: inline;float: left;}
+.menu-nav a {color: #000;display: inline-block;text-align: center;text-decoration: none;line-height: 40px;}
+.menu-nav li a {padding: 0px 10px 15px; margin: 0 5px;}
+.menu-nav a:hover, .res-nav a:active {color: #800000; font-weight: bold;}
+.menu-nav a:hover {background: url(img/hover.png) no-repeat center bottom;}
+.res-nav {display: none;}
+
+
+.res-nav {height: 40px;width: 100%;background: #800000;font-size: 11pt;position: relative;}
+.res-nav ul {padding: 0;margin: 0 auto;width: 600px;height: 40px;}
+.res-nav li {display: inline;float: left;}
+.res-nav a {color: #fff;display: inline-block;width: 100px;text-align: center;text-decoration: none;line-height: 40px;}
+.res-nav li a {border-right: 1px solid #ad0000;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.res-nav li:last-child a {border-right: 0;}
+.res-nav a:hover, .res-nav a:active {background-color: #ac0000;}
+.res-nav a#pull {display: none;}
+
+/*Carousel Slider*/
+.carousel {min-height: auto;}
+.carousel-indicators li {border: 2px solid #800000 !important;}
+.carousel-indicators {bottom: -4px !important}
+
+/*Homepage Content*/
+.red-strip-title {width: 100%; position: relative; height: 40px; background: #800000;}
+.wrap {max-width: 960px; height: auto; margin: 0 auto;}
+.red-strip-title p {font-size: 23px; font-family: 'TrajanPro-Bold'; color: #fff;margin: 3px 0;}
+.message {padding: 0 !important;}
+
+
+/*Footer*/
+#footer-container {min-height: 250px; position: relative; width: 100%; background: #800000; padding: 30px; color: #fff;}
+#footer-container ul {list-style-type: none; padding: 0 !important;}
+#footer-container a {color: #fff;}
+#footer-container img {width: 200px;}
+
+/*Responsive Styles*/
+@media screen and (max-width: 1170px) {
+    .menu-nav {right: 0;}
+    .title, .logo-container {left: 2%;}
+    .alumni-title {font-size: 20px;}
+    .title {width: 300px;}
+    .menu-nav ul {padding-left: 0 !important;}
+}
+
+@media screen and (max-width: 990px) {
+    .menu-nav {display: none;}
+    .res-nav {display: block;}
+    .res-nav { height: auto;}
+    .res-nav ul {width: 100%;display: none;height: auto;}
+    .res-nav li {width: 50%;float: left;position: relative;}
+    .res-nav li a {border-bottom: 1px solid #ad0000;border-right: 1px solid #ad0000;}
+    .res-nav a {text-align: left;width: 100%;text-indent: 25px;}
+    .res-nav a#pull {display: block;position: relative; z-index: 1000;}
+    .res-nav a#pull:after {content:"";background: url('img/nav-icon.png') no-repeat;background-size: 75%; width: 40px;height: 40px;display: inline-block;position: absolute;right: 20px;top: 40px;}
+}
+
+@media only screen and (max-width : 800px) {
+  
+}
+
+
+@media only screen and (max-width : 500px) {
+    .logo-container img {width: 80%;}
+    .title {left: 0;    }
+    .res-nav {border-bottom: 0;}
+    .res-nav ul {display: none;height: auto;}
+    .alumni-title {font-size: 15px;}
+  
+}
+
+/*Smartphone*/
+
+@media only screen and (max-width: 430px) {
+    .res-nav li {display: block;float: none;width: 100%;}
+    .res-nav li a {border-bottom: 1px solid #ad0000;}
+    .logo-container img {width: 90%;}
+    .logo-container {width: 100px;}
+    .title {margin: 20px 0 0; width: 193px;left: -7px;}
+    .alumni-title {font-size: 12px;}
+    .santarosa-title {font-size: 13px;  }
+    .res-nav a#pull:after {background-size: 65%; right: 0; top: 36px}
+    #header-container {min-height: 100px;}
+
+}
+
+@media only screen and (max-width : 320px) {
+    
+}
+
+
+
+
+
