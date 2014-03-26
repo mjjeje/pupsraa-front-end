@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Polytechnic University of the Philippines :: Alumni</title>
+  <title>Polytechnic University of the Philippines :: Alumni - Beta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
