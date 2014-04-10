@@ -14,7 +14,8 @@
     <!--script src="js/less-1.3.3.min.js">
             </script-->
     <!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
+
+    <link id="scrollUpTheme" rel="stylesheet" href="css/scrollup/themes/image.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -42,8 +43,25 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/scrollup/lib/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/scrollup/src/jquery.scrollUp.js"></script>
     <script>
         $(function () {
+            $.scrollUp({
+                scrollName: 'scrollUp',
+                scrollDistance: 300,
+                scrollFrom: 'top',
+                scrollSpeed: 600,
+                easingType: 'easeInOutCubic',
+                animation: 'slide',
+                animationInSpeed: 300,
+                animationOutSpeed: 300,
+                scrollTrigger: false,
+                scrollTitle: false,
+                scrollImg: true,
+                activeOverlay: false,
+                zIndex: 2147483647
+            });
             var pull = $('#pull');
             menu = $('.res-nav ul');
             menuHeight = menu.height();
@@ -149,30 +167,25 @@
         </div>
     </div>
     <script type="text/javascript">
-        //$("#search-bar").on("focus", "input, text", function() {
-        $("#search-bar").click(function() {
+        $("#search-bar").click(function () {
             $(".hide-search").hide();
             $("#search-bar").css("width", "300px");
         });
-        $("#search-bar").blur(function() {
+        $("#search-bar").blur(function () {
             $("#search-bar").css("width", "90px");
-            
-            setTimeout(function(){
-              $(".hide-search").fadeTo("slow", 1);
+
+            setTimeout(function () {
+                $(".hide-search").fadeTo("slow", 1);
             }, 250);
         });
-        //}
     </script>
     <!--Responsive Carousel Slider by Bootstrap. Please include PHP condition here to hide this banner on inner pages-->
-    
     <div id="carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active">
             </li>
             <li data-target="#carousel" data-slide-to="1">
-            </li>
-            <li data-target="#carousel" data-slide-to="2">
             </li>
         </ol>
         <!-- Wrapper for slides -->
@@ -182,10 +195,10 @@
                 </div>
                 <div class="caption-text">
                     <b>
-                            Headline Here
+                            PUPCET Oplan Panulat
                         </b>
                     <p>
-                        Caption Here Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <a href="">Read More..</a>
+                        It's time to touch lives PUPians! Please support OPLAN PANULAT, a project of the Polytechnic University of the Philippines Santa Rosa Alumni Association, Inc. (PUPSRAAI). <a class="carousel-link" href="">Read More..</a>
                     </p>
                 </div>
                 <img src="img/oplan_panulat_small_black.jpg" alt="...">
@@ -200,22 +213,7 @@
                             Headline Here
                         </b>
                     <p>
-                        Caption Here Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <a href="">Read More..</a>
-                    </p>
-                </div>
-                <img src="img/oplan_panulat_small_black.jpg" alt="...">
-                <div class="carousel-caption">
-                </div>
-            </div>
-            <div class="item">
-                <div class="caption-black">
-                </div>
-                <div class="caption-text">
-                    <b>
-                            Headline Here
-                        </b>
-                    <p>
-                        Caption Here Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <a href="">Read More..</a>
+                        Caption Here Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod <a class="carousel-link" href="">Read More..</a>
                     </p>
                 </div>
                 <img src="img/oplan_panulat_small_black.jpg" alt="...">
@@ -235,354 +233,316 @@
     </div>
     <!--Responsive Grid-based home content.-->
     <!--Home content goes here. Columns made with Unsemantic Grid System-->
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-    <html>
-
-    <head>
-        <title>
-        </title>
-    </head>
-
-    <body>
-        <div class="red-strip-title">
-            <div class="wrap">
-                <div class="grid-container">
-                    <div class="grid-100">
-                        <div class="grid-65">
-                            <p>
-                                Projects
-                            </p>
-                        </div>
-                        <div class="grid-35 news-title">
-                            <p>
-                                News
-                            </p>
-                            <!--<div class="arrow-down news-title">
-                            </div>-->
-                        </div>
+    <div class="red-strip-title">
+        <div class="wrap">
+            <div class="grid-container">
+                <div class="grid-100">
+                    <div class="grid-65">
+                        <p>
+                            Projects
+                        </p>
+                    </div>
+                    <div class="grid-35 news-title">
+                        <p>
+                            News
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wrap">
-            <div class="grid-container">
-                <div class="grid-100">
-                    <!--Projects-->
-                    <div class="grid-65">
-                        <div class="projects-container">
-                            <div class="projects-thumbnail">
-                                <img src="img/thumbnail-projects.jpg">
-                            </div>
-                            <p class="projects-caption">
-                                <b>Title Here</b><br>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut.
-                                </br>
-                                <a href="#">
+    </div>
+    <div class="wrap">
+        <div class="grid-container">
+            <div class="grid-100">
+                <!--Projects-->
+                <div class="grid-65">
+                    <div class="projects-container">
+                        <div class="projects-thumbnail">
+                            <img src="img/thumbnail-projects.jpg">
+                        </div>
+                        <p class="projects-caption">
+                            <b>PUPCET Oplan Panulat</b>
+                            <br>OPLAN PANULAT aims to help students of different public schools to have school supplies for the School Year 2014-2015.
+                            </br>
+                            <a href="#">
                                         Read More »
                                         </a>
-                            </p>
-                        </div>
-                        <div class="projects-container">
-                            <div class="projects-thumbnail">
-                                <img src="img/thumbnail-projects.jpg">
-                            </div>
-                            <p class="projects-caption">
-                                <b>Title Here</b><br>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut.
-                                </br>
-                                <a href="#">
-                                        Read More »
-                                        </a>
-                            </p>
-                        </div>
-                        <div class="projects-viewall">
-                            <p>
-                                <a href="#">
+                        </p>
+                    </div>
+                    <div class="projects-viewall">
+                        <p>
+                            <a href="#">
                                         View all Projects »
                                         </a>
-                            </p>
-                        </div>
-                        <!--Message from the Director-->
-                        <div class="grid-100 message">
-                            <div class="message-container">
-                                <h3>
+                        </p>
+                    </div>
+                    <!--Message from the Director-->
+                    <div class="grid-100 message">
+                        <div class="message-container">
+                            <h3>
                                             Message from the Director
                                         </h3>
-                                <div class="message-thumbnail">
-                                    <img src="img/director.jpg">
-                                </div>
-                                <p class="message-caption">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                    magna tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut. Lorem
-                                    ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                    tincidunt ut laoreet dolore magna tincidunt ut.
+                            <div class="message-thumbnail">
+                                <img src="img/director.jpg">
+                            </div>
+                            <p class="message-caption">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Responsive News Strip, since 'News' will be hidden at arounf 760px width resolution -->
+                <div class="red-strip-news">
+                    <div class="wrap">
+                        <div class="grid-container">
+                            <div class="grid-100">
+                                <p>
+                                    News
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <!--Responsive News Strip, since 'News' will be hidden at arounf 760px width resolution -->
-                    <div class="red-strip-news">
-                        <div class="wrap">
-                            <div class="grid-container">
-                                <div class="grid-100">
-                                    <p>
-                                        News
-                                    </p>
-                                </div>
+                </div>
+                <!--News-->
+                <div class="grid-35">
+
+                    <div class="news-sidebar">
+                        <div class="news-content">
+                            <div class="news-thumbnail">
+                                <img src="img/news-thumbnail.jpg">
+                            </div>
+                            <div class="news-caption">
+                                <p>
+                                    <b>
+                                                Testimonial Program for Board Passers
+                                                </b>
+                                </p>
+                                <p>
+                                    <!--<i>
+                                                March 25, 2014
+                                                </i>-->
+                                </p>
+                                <p>
+                                    PUP Santa Rosa Campus was once again blessed
+                                    <br>
+                                    <a href="#">
+                                                Read More »
+                                                </a>
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <!--News-->
-                    <div class="grid-35">
-                    
-                        <div class="news-sidebar">
-                            <div class="news-content">
-                                <div class="news-thumbnail">
-                                    <img src="img/news-thumbnail.jpg">
-                                </div>
-                                <div class="news-caption">
-                                    <p>
-                                        <b>
-                                                News Title Here
-                                                </b>
-                                    </p>
-                                    <p>
-                                        <i>
-                                                March 25, 2014
-                                                </i>
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        <br>
-                                        <a href="#">
-                                                Read More »
-                                                </a>
-                                    </p>
-                                </div>
+                        <div class="news-content">
+                            <div class="news-thumbnail">
+                                <img src="img/news-thumbnail.jpg">
                             </div>
-                            <div class="news-content">
-                                <div class="news-thumbnail">
-                                    <img src="img/news-thumbnail.jpg">
-                                </div>
-                                <div class="news-caption">
-                                    <p>
-                                        <b>
-                                                News Title Here
+                            <div class="news-caption">
+                                <p>
+                                    <b>
+                                                Oath Taking of Officers
                                                 </b>
-                                    </p>
-                                    <p>
-                                        <i>
-                                                March 25, 2014
+                                </p>
+                                <p>
+                                    <i>
+                                                February 8, 2014 
                                                 </i>
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        <br>
-                                        <a href="#">
+                                </p>
+                                <p>
+                                    the humble beginning of the PUP Santa Rosa Alumni Association, Inc.
+                                    <br>
+                                    <a href="#">
                                                 Read More »
                                                 </a>
-                                    </p>
-                                </div>
+                                </p>
                             </div>
-                            <div class="news-content">
-                                <div class="news-thumbnail">
-                                    <img src="img/news-thumbnail.jpg">
-                                </div>
-                                <div class="news-caption">
-                                    <p>
-                                        <b>
-                                                News Title Here
+                        </div>
+                        <div class="news-content">
+                            <div class="news-thumbnail">
+                                <img src="img/news-thumbnail.jpg">
+                            </div>
+                            <div class="news-caption">
+                                <p>
+                                    <b>
+                                                Volleyball Summer Camp 2014
                                                 </b>
-                                    </p>
-                                    <p>
-                                        <i>
-                                                March 25, 2014
+                                </p>
+                                <p>
+                                    <i>
+                                                April 7-11, 2014
                                                 </i>
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        <br>
-                                        <a href="#">
+                                </p>
+                                <p>
+                                    Come join us for camp this summer!
+                                    <br>
+                                    <a href="#">
                                                 Read More »
                                                 </a>
-                                    </p>
-                                </div>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="news-content">
+                            <div class="news-thumbnail">
+                                <img src="img/news-thumbnail.jpg">
                             </div>
 
-                            <div class="news-content">
-                                <div class="news-thumbnail">
-                                    <img src="img/news-thumbnail.jpg">
-                                </div>
-                                
-                                <div class="news-caption">
-                                    <p>
-                                        <b>
-                                                News Title Here
+                            <div class="news-caption">
+                                <p>
+                                    <b>
+                                                Securities and Exchange Commission Certificate
                                                 </b>
-                                    </p>
-                                    <p>
-                                        <i>
+                                </p>
+                                <p>
+                                    <!--<i>
                                                 March 25, 2014
-                                                </i>
-                                    </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        <br>
-                                        <a href="#">
+                                                </i>-->
+                                </p>
+                                <p>
+                                    PUPSRAAI were duly approved by SEC
+                                    <br>
+                                    <a href="#">
                                                 Read More »
                                                 </a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="view-btn">
-                                <a class="btn-red" href="#">
-                                        More News
-                                        </a>
+                                </p>
                             </div>
                         </div>
-                        <div class="about-sidebar">
-                            <div class="about-content">
-                                <h4>
-                                            <center>About PUPSRAAI</center>
+                        <div class="view-btn">
+                            <a class="btn-red" href="#">
+                                        More News
+                                        </a>
+                        </div>
+                    </div>
+                    <div class="about-sidebar">
+                        <div class="about-content">
+                            <h4>
+                                            <center>PUPSRAAI Objectives</center>
                                         </h4>
-                                <div class="maroon-logo">
+                            <!--<div class="maroon-logo">
                                     <img src="img/pup-maroon.png">
-                                </div>
-                            </div>
+                                </div>-->
+                            <p style="padding:10px; font-size:12px;">
+                                <br>To assist the Polytechnic University of the Philippines Santa Rosa Campus to continue its role in clearing the path while laying new foundations to transform the institution into an epistemic community.
+                                <br>
+                                <br>To provide an organized alumni assistance to Polytechnic University of the Philippines Santa Rosa Campus graduates.
+                                <br>
+                                <br>To serve as a significant instrument thru which the alumni can reciprocately channel their resources in the promotion of higher education in the country.
+
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
 
-    </html>
-    <!--Responsive Footer-->
-    <div id="footer-container">
-        <div class="wrap">
-            <div class="grid-container">
-                <div class="grid-100">
-                    <div class="grid-20 mobile-grid-50 footer-menu">
-                        <p>
-                            <b>
+</html>
+<!--Responsive Footer-->
+<div id="footer-container">
+    <div class="wrap">
+        <div class="grid-container">
+            <div class="grid-100">
+                <div class="grid-20 mobile-grid-50 footer-menu">
+                    <p>
+                        <b>
                                 What's Up
                                 </b>
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#">
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
                                     News
                                     </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                        </li>
+                        <li>
+                            <a href="#">
                                     Alumni Projects
                                     </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                        </li>
+                        <li>
+                            <a href="#">
                                     Events
                                     </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="grid-20 mobile-grid-50 footer-menu">
-                        <p>
-                            <b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid-20 mobile-grid-50 footer-menu">
+                    <p>
+                        <b>
                                 Donate
                                 </b>
-                            <ul>
+                        <ul>
                             <li>
                                 <a href="#">
                                     Fill Up Form
                                     </a>
                             </li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="grid-20 mobile-grid-50 footer-menu">
-                        <p>
-                            <b>
+                        </ul>
+                    </p>
+                </div>
+                <div class="grid-20 mobile-grid-50 footer-menu">
+                    <p>
+                        <b>
                                 Register
                                 </b>
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#">
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
                                     As Alumni
                                     </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                        </li>
+                        <li>
+                            <a href="#">
                                     As Resource Speaker
                                     </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="grid-20 mobile-grid-50 footer-menu">
-                        <p>
-                            <b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid-20 mobile-grid-50 footer-menu">
+                    <p>
+                        <b>
                                 Contact Us
                                 </b>
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#">
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
                                     Map
                                     </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                        </li>
+                        <li>
+                            <a href="#">
                                     Contact List
                                     </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                        </li>
+                        <li>
+                            <a href="#">
                                     History
                                     </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="grid-20 mobile-grid-100 footer-menu-img">
-                        <img src="img/pup-logo-white.png">
-                    </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid-20 mobile-grid-100 footer-menu-img">
+                    <img src="img/pup-logo-white.png">
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
+</div>
+</div>
+</div>
 </body>
 <script>
-    /*(function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    $("document").ready(function () {
+        $(".caption-text").fadeTo("fast", 0.5);
+        $(".caption-black").fadeTo("fast", 0.5);
 
-    ga('create', 'UA-49423591-1', 'pupsraa.com');
-    ga('send', 'pageview');*/
-    $("document").ready(function() {
-        $(".caption-text").fadeTo( "fast", 0.5 );
-        $(".caption-black").fadeTo( "fast", 0.5 );
-        
     });
-    $(".carousel").hover(function() {
-        $(".caption-text").fadeTo( "fast", 0.8 );
-        $(".caption-black").fadeTo( "fast", 0.8 );
-    },function() {
-        $(".caption-text").fadeTo( "fast", 0.5 );
-        $(".caption-black").fadeTo( "fast", 0.5 );
-    }
-    );
-
+    $(".carousel").hover(function () {
+        $(".caption-text").fadeTo("fast", 0.8);
+        $(".caption-black").fadeTo("fast", 0.8);
+    }, function () {
+        $(".caption-text").fadeTo("fast", 0.5);
+        $(".caption-black").fadeTo("fast", 0.5);
+    });
 </script>
-
 </html>
